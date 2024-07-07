@@ -18,9 +18,9 @@
       <li><a href="">Home</a></li>
       <li><a href="">Categories</a>
         <ul id="submenu">
-          <li><a href="#Dining">DINING</a></li>
-          <li><a href="#living">LIVING</a></li>
-          <li><a href="#bedroom">BEDROOM</a></li>
+          <li><a href="../catergories/dining.php">DINING</a></li>
+          <li><a href="../catergories/living.php">LIVING</a></li>
+          <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
         </ul>
       </li>
 

@@ -20,9 +20,9 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#categories">Categories</a>
                 <ul id="submenu">
-                    <li><a href="#Dining">DINING</a></li>
-                    <li><a href="#living">LIVING</a></li>
-                    <li><a href="#bedroom">BEDROOM</a></li>
+                    <li><a href="dining.php">DINING</a></li>
+                    <li><a href="living.php">LIVING</a></li>
+                    <li><a href="">BEDROOM</a></li>
                 </ul>
             </li>
 
@@ -44,9 +44,6 @@
     </div>
 
     <main>
-        <section class="hero">
-            <h1>Bedroom</h1>
-        </section>
         <section class="products">
             <div class="filter-sort">
                 <div class="filter">

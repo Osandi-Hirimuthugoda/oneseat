@@ -17,10 +17,10 @@
     </div>
     <div class="topnav">
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="../index/oneseat.php">Home</a></li>
             <li><a href="#categories">Categories</a>
                 <ul id="submenu">
-                    <li><a href="#Dining">DINING</a></li>
+                    <li><a href="../catergories/dining.php">DINING</a></li>
                     <li><a href="#living">LIVING</a></li>
                     <li><a href="#bedroom">BEDROOM</a></li>
                 </ul>
@@ -44,9 +44,6 @@
     </div>
 
     <main>
-        <section class="hero">
-            <h1>Living</h1>
-        </section>
         <section class="products">
             <div class="filter-sort">
                 <div class="filter">

@@ -11,18 +11,18 @@
 
 <body>
     <div class="logo">
-        <a href="#">
+        <a href="../index/oneseat.php">
             <img src="../images/Logo.png" alt="logo" width="125px" height="50px">
         </a>
     </div>
     <div class="topnav">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#categories">Categories</a>
+            <li><a href="../index/oneseat.php">Home</a></li>
+            <li><a href="../index/oneseat.php">Categories</a>
                 <ul id="submenu">
-                    <li><a href="#Dining">DINING</a></li>
-                    <li><a href="#living">LIVING</a></li>
-                    <li><a href="#bedroom">BEDROOM</a></li>
+                    <li><a href="">DINING</a></li>
+                    <li><a href="living.php">LIVING</a></li>
+                    <li><a href="bedroom.php">BEDROOM</a></li>
                 </ul>
             </li>
 
@@ -43,9 +43,6 @@
         <div class="toptext">DINING ROOM</div>
     </div>
     <main>
-        <section class="hero">
-            <h1>Dining</h1>
-        </section>
         <section class="products">
             <div class="filter-sort">
                 <div class="filter">
