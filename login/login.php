@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($pwd === $pass) {
             header("Location: /oneseat/index/oneseat.php");
         } else {
-            echo "Invalid password";
+            echo '<script>window.location.href = "/oneseat/login/login_form.php";alert("Invalid password");</script>';
         }
     } else {
-        echo "User not found";
+        echo '<script>window.location.href = "/oneseat/login/login_form.php";alert("User not found");</script>';
     }
 
 }

@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="oneseat.css">
-    <title>oneseat</title>
-  </head>
-  <body>
-    <div class="logo">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="oneseat.css">
+  <title>oneseat</title>
+</head>
+
+<body>
+  <div class="logo">
+    <a href="">
+      <img src="Logo.png" alt="logo" width="125px " height="50px">
+    </a>
+  </div>
+  <div class="topnav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Categories</a>
+        <ul id="submenu">
+          <li><a href="#Dining">DINING</a></li>
+          <li><a href="#living">LIVING</a></li>
+          <li><a href="#bedroom">BEDROOM</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="split" style="padding-right: 20px;">
       <a href="">
-        <img src="Logo.png" alt="logo" width="125px " height="50px">
+        <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
+      </a>
+      <a href="">
+        <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
       </a>
     </div>
-    <div class="topnav">
-      <a href="#home">Home</a>
-      
-      <a href="#categories">Categories</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <div class="split" style="padding-right: 20px;">
-        <a href="">
-          <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
-        </a>
-        <a href="">
-          <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;" >
-        </a>
-      </div>
+  </div>
+  <div class="top">
+    <img src="top.jpg" alt="image" width="1500px" height="400px">
+    <div class="toptext">BUY YOUR <br> DREAM FURNITURE</div>
+    <div class="search">
+      <form action="#">
+        <input type="text" placeholder="What are you looking for?" name="search">
+        <button>
+          <img src="Search.png" width="20px" height="20px" style="border-radius: 50%;">
+          <i class="fa fa-search" style="font-size: 20px; font-family: 'poppins';"></i>
+        </button>
+      </form>
     </div>
-    <div class="top">
-      <img src="top.jpg" alt="image" width="1500px" height="400px">
-      <div class="toptext">BUY YOUR <br> DREAM FURNITURE</div>
-      <div class="search">
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?" name="search">
-            <button>
-              <img src="Search.png" width="20px" height="20px" style="border-radius: 50%;">
-              <i class="fa fa-search" style="font-size: 20px; font-family: 'poppins';"></i>
-            </button>
-        </form>
-      </div>
-      <div class="shopnow">
-        <a href="">Shop Now  <img src="bag-removebg-preview.png" width="20px" height="20px" style="margin-top: 5px;"></a>
-      </div>
-        
+    <div class="shopnow">
+      <a href="">Shop Now <img src="bag-removebg-preview.png" width="20px" height="20px" style="margin-top: 5px;"></a>
     </div>
 
-    <div class="categorytext" style="padding: 5px;">
-      <h2>Categories</h2>
-      <h6>Find what you are looking for...</h6>
-    </div>
+  </div>
 
-    <section class="categories">
-      <div class="container">
-          
-          <div class="category-list">
-              <div class="category">
-                  <a href=""><img src="dining.jpg" alt="Dining" width="300px" height="300px">
-                    <h3>Dining</h3>
-                  </a>
-                  
-              </div>
-              <div class="category">
-                  <a href=""><img src="living.jpg" alt="Living" width="300px" height="300px">
-                    <h3>Living</h3>
-                  </a>
-                  
-              </div>
-              <div class="category">
-                  <a href=""><img src="bedroom.jpg" alt="Bedroom" width="300px" height="300px">
-                    <h3>Bedroom</h3>
-                  </a>
-                  
-              </div>
-          </div>
-          <button class="explore">Explore -></button>
+  <div class="categorytext" style="padding: 5px;">
+    <h2>Categories</h2>
+    <h6>Find what you are looking for...</h6>
+  </div>
+
+  <section class="categories">
+    <div class="container">
+
+      <div class="category-list">
+        <div class="category">
+          <a href=""><img src="dining.jpg" alt="Dining" width="300px" height="300px">
+            <h3>Dining</h3>
+          </a>
+
+        </div>
+        <div class="category">
+          <a href=""><img src="living.jpg" alt="Living" width="300px" height="300px">
+            <h3>Living</h3>
+          </a>
+
+        </div>
+        <div class="category">
+          <a href=""><img src="bedroom.jpg" alt="Bedroom" width="300px" height="300px">
+            <h3>Bedroom</h3>
+          </a>
+
+        </div>
       </div>
+      <button class="explore">Explore -></button>
+    </div>
   </section>
 
   <div class="aboutustext">
@@ -85,23 +95,23 @@
     <div class="features">
       <div class="feature" style="font-family: 'poppins';">
         <img src="assortment.png">
-          <h3>Large Assortment</h3>
-          <p>we offer many different types of products with fewer variations in each category.</p>
+        <h3>Large Assortment</h3>
+        <p>we offer many different types of products with fewer variations in each category.</p>
       </div>
       <div class="feature" style="font-family: 'poppins';">
         <img src="shipping.png">
-          <h3>Fast & Free Shipping</h3>
-          <p>4-day or less delivery time, free shipping and an expedited delivery option.</p>
+        <h3>Fast & Free Shipping</h3>
+        <p>4-day or less delivery time, free shipping and an expedited delivery option.</p>
       </div>
       <div class="feature" style="font-family: 'poppins';">
         <img src="service.png">
-          <h3>24/7 Support</h3>
-          <p>answers to any business related inquiry 24/7 and in real-time.</p>
+        <h3>24/7 Support</h3>
+        <p>answers to any business related inquiry 24/7 and in real-time.</p>
       </div>
   </section>
-  
+
   <footer class="footer">
-    
+
     <div class="details">
       <div class="shopname" style="font-family: 'poppins';">
         <h2>OneSeat</h2>
@@ -130,5 +140,6 @@
     </div>
 
   </footer>
-  </body>
+</body>
+
 </html>
