@@ -9,7 +9,7 @@
 <!-- Header -->
 <div class="logo">
     <a href="">
-      <img src="Logo.png" alt="logo" width="125px" height="50px">
+      <img src="../images/Logo.png" alt="logo" width="125px" height="50px">
     </a>
   </div>
   <div class="topnav">
@@ -19,10 +19,10 @@
     <a href="#contact">Contact</a>
     <div class="split" style="padding-right: 20px;">
       <a href="">
-        <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
+        <img src="../images/login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
       </a>
       <a href="">
-        <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
+        <img src="../images/Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
       </a>
     </div>
   </div>
@@ -65,9 +65,9 @@
       </div>
       <div class="links" style="font-family: 'poppins';">
         <h3>Contact Us</h3><br>
-        <a href=""><img src="fb.png" alt="facebook" style="margin: 10px;"></a>
-        <a href=""><img src="insta.png" alt="instagram" style="margin: 10px;"></a>
-        <a href=""><img src="twitter.png" alt="twitter" style="margin: 10px;"></a>
+        <a href=""><img src="../images/fb.png" alt="facebook" style="margin: 10px;"></a>
+        <a href=""><img src="../images/insta.png" alt="instagram" style="margin: 10px;"></a>
+        <a href=""><img src="../images/twitter.png" alt="twitter" style="margin: 10px;"></a>
       </div>
     </div>
   </footer>

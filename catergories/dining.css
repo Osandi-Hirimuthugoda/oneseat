@@ -1,0 +1,294 @@
+/* styles.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    float: left;
+}
+
+.logo a:hover {
+    background-color: #ffffff;
+}
+
+.topnav {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.topnav ul,.topnav li{
+    margin:0;
+    padding:0;
+  }
+  .topnav ul{
+    list-style:none;
+    width:100%;
+  }
+  .topnav li{
+    
+    float: left;
+    position:relative;
+    width:auto;
+  }
+
+.topnav a {
+    float: left;
+    color: #000000;
+    display:block;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 20px;
+    font-family: 'Poppins';
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.topnav a:hover {
+    background-color: #FFF2D7;
+    color: rgb(255, 255, 255);
+}
+#submenu
+  {
+    left:0;
+    opacity:0;
+    position:fixed;
+	left:16vw;
+	display:flex;
+	flex-direction:column;
+    top:35px;
+    visibility:hidden;
+    z-index:1;
+  }
+  li:hover ul#submenu{
+    opacity:1;
+    top:50px;
+    visibility: visible;
+  }
+  #submenu li{
+    float:none;
+    width:100%;
+  }
+  #submenu a:hover{
+    background:#CFB284;
+  }
+
+.split {
+    float: right;
+}
+
+.split a:hover {
+    background-color: #FFF2D7;
+}
+
+
+
+.top img {
+    border-radius: 50px;
+    filter:blur(2px);
+    
+}
+.toptext {
+    position: absolute;
+    top: 250px;
+    left: 600px;
+    font-size: 40px;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.hero {
+    background: url('example-img.png') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.products {
+    padding: 2rem;
+    
+    
+}
+
+.filter-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    
+}
+
+.filter-sort .filter button,
+.filter-sort .sort select {
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #eee;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 30%;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.search input[type=text] {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search {
+    position: absolute;
+    top: 150px;
+    left: 1100px;
+    float: right;
+}
+
+.search button {
+    background-color: #FFF2D7;
+    position: absolute;
+    float: right;
+    border: none;
+    cursor: pointer;
+    right: 10px;
+    top: 5px;
+    border-radius: 50%;
+}
+
+.shopnow a {
+    font-size: 20px;
+    font-family: 'Poppins';
+    text-decoration: none;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+.shopnow {
+    background-color: #FFF2D7;
+    overflow: hidden;
+    width: 140px;
+    height: 35px;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+    border-radius: 5px;
+}
+
+.categorytext {
+    position: absolute;
+    left: 700px;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.categories {
+    background-color: #FFF2D7;
+    padding: 50px 0;
+    margin-top: 110px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.category {
+    width: 30%;
+}
+
+.category img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category a {
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    text-decoration: none;
+    color: #000;
+}
+
+.explore {
+    background-color: #FFDB90;
+    width: 95px;
+    height: 40px;
+    font-family: 'Poppins';
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.aboutustext {
+    padding-bottom: 150px;
+}
+
+.aboutustext h2{
+    position: absolute;
+    left: 700px;
+    font-family: 'poppins';
+  }
+  .footer {
+    background-color: #FFF2D7;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 1600px;
+    width: 100%;
+    padding: 50px 0;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .details {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFF2D7;
+  }
+  .links h3 {
+    opacity: 50%;
+    text-decoration: none;
+  }
+  .links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
