@@ -65,19 +65,19 @@ $conn->close();
   </div>
   <div class="topnav">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#categories">Categories</a>
+      <li><a href="../index/oneseat.php">Home</a></li>
+      <li><a href="../index/oneseat.php">Categories</a>
         <ul id="submenu">
-          <li><a href="#Dining">DINING</a></li>
-          <li><a href="#living">LIVING</a></li>
-          <li><a href="#bedroom">BEDROOM</a></li>
+          <li><a href="../catergories/dining.php">DINING</a></li>
+          <li><a href="../catergories/living.php">LIVING</a></li>
+          <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
         </ul>
       </li>
-      <li><a href="#about">About</a></li>
+      <li><a href="../about-us/about_us.html">About</a></li>
       <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
     <div class="split" style="padding-right: 20px;">
-      <a href="">
+      <a href="#">
         <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
       </a>
       <a href="">
@@ -120,12 +120,15 @@ $conn->close();
       </div>
     </div>
     <div class="card-details">
-      <div class="summary">
-        <p>Subtotal: <span><?php echo number_format($total_price, 2); ?></span></p>
-        <p>Shipping: <span>free shipping</span></p>
-        <p>Total(Incl. taxes): <span><?php echo number_format($total_price, 2); ?></span></p>
-      </div>
-      <button class="checkout">Checkout</button>
+      <form action="../checkout/checkOut.php" method="post">
+        <div class="summary">
+          <p>Subtotal: <span><?php echo number_format($total_price, 2); ?></span></p>
+          <p>Shipping: <span>free shipping</span></p>
+          <p>Total(Incl. taxes): <span><?php echo number_format($total_price, 2); ?></span></p>
+        </div>
+        <input type="hidden" name="total" value="<?php echo number_format($total_price, 2); ?>">
+        <input class="checkout" type="submit" value="Checkout">
+      </form>
     </div>
   </div>
 

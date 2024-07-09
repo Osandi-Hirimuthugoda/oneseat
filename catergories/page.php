@@ -53,23 +53,22 @@ $conn->close();
   </div>
   <div class="topnav">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#categories">Categories</a>
+      <li><a href="../index/oneseat.php">Home</a></li>
+      <li><a href="../index/oneseat.php">Categories</a>
         <ul id="submenu">
-          <li><a href="#Dining">DINING</a></li>
-          <li><a href="#living">LIVING</a></li>
-          <li><a href="#bedroom">BEDROOM</a></li>
+          <li><a href="../catergories/dining.php">DINING</a></li>
+          <li><a href="../catergories/living.php">LIVING</a></li>
+          <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
         </ul>
       </li>
-
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="../about-us/about_us.html">About</a></li>
+      <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
     <div class="split" style="padding-right: 20px;">
       <a href="#">
         <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
       </a>
-      <a href="#">
+      <a href="../shoping cart/cart.php">
         <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
       </a>
     </div>

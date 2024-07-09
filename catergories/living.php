@@ -37,7 +37,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneSeat - DiningRoom</title>
+    <title>OneSeat - Living Room</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="dining.css">
 </head>
@@ -53,19 +53,19 @@ $conn->close();
             <li><a href="../index/oneseat.php">Home</a></li>
             <li><a href="../index/oneseat.php">Categories</a>
                 <ul id="submenu">
-                    <li><a href="">DINING</a></li>
-                    <li><a href="living.php">LIVING</a></li>
+                    <li><a href="dining.php">DINING</a></li>
+                    <li><a href="">LIVING</a></li>
                     <li><a href="bedroom.php">BEDROOM</a></li>
                 </ul>
             </li>
-            <li><a href="#about">About</a></li>
+            <li><a href="../about-us/about_us.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="split" style="padding-right: 20px;">
             <a href="#">
                 <img src="../images/login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
             </a>
-            <a href="#">
+            <a href="../shoping cart/cart.php">
                 <img src="../images/Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
             </a>
         </div>

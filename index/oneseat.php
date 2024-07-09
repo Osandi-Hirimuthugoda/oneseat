@@ -4,7 +4,7 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link rel="stylesheet" href="oneseat.css">
-  <title>oneseat</title>
+  <title>oneseat-home page</title>
 </head>
 
 <body>
@@ -24,14 +24,14 @@
         </ul>
       </li>
 
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="../about-us/about_us.html">About</a></li>
+      <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
     <div class="split" style="padding-right: 20px;">
-      <a href="">
+      <a href="#">
         <img src="../images/login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
       </a>
-      <a href="">
+      <a href="../shoping cart/cart.php">
         <img src="../images/Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
       </a>
     </div>
@@ -64,19 +64,20 @@
 
       <div class="category-list">
         <div class="category">
-          <a href=""><img src="../images/dining.jpg" alt="Dining" width="300px" height="300px">
+          <a href="../catergories/dining.php"><img src="../images/dining.jpg" alt="Dining" width="300px" height="300px">
             <h3>Dining</h3>
           </a>
 
         </div>
         <div class="category">
-          <a href=""><img src="../images/living.jpg" alt="Living" width="300px" height="300px">
+          <a href="../catergories/living.php"><img src="../images/living.jpg" alt="Living" width="300px" height="300px">
             <h3>Living</h3>
           </a>
 
         </div>
         <div class="category">
-          <a href=""><img src="../images/bedroom.jpg" alt="Bedroom" width="300px" height="300px">
+          <a href="../catergories/bedroom.php"><img src="../images/bedroom.jpg" alt="Bedroom" width="300px"
+              height="300px">
             <h3>Bedroom</h3>
           </a>
 
@@ -140,6 +141,13 @@
     </div>
 
   </footer>
+  <script>
+    function scrollToFooter() {
+      document
+        .getElementById("footer")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 
 </html>
