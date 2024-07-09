@@ -1,3 +1,36 @@
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "oneseat"; // Replace with your database name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// SQL query to fetch product details by category name
+$category_name = 'Dining'; // Replace with the actual category name
+$sql = "SELECT product_id, product_name, product_price, product_image FROM product WHERE category = '$category_name'";
+
+$result = $conn->query($sql);
+
+$products = array();
+
+if ($result->num_rows > 0) {
+    // Fetch all products into an array
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
+} else {
+    echo "No products found.";
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +58,6 @@
                     <li><a href="bedroom.php">BEDROOM</a></li>
                 </ul>
             </li>
-
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -64,27 +96,19 @@
                 </div>
             </div>
             <div class="product-list">
-                <div class="product">
-                    <img src="../images/dining/D2.jpeg" alt="Domex Dining Set">
-                    <h2>DOMEX - DINING SET</h2>
-                    <p>Rs.368,800.00</p>
-                </div>
-                <div class="product">
-                    <img src="../images/dining/D1.jpeg" alt="Dining Set Duron">
-                    <h2>DINING SET DURON</h2>
-                    <p>Rs.340,500.00</p>
-                </div>
-                <div class="product">
-                    <img src="../images/dining/D3.jpeg" alt="Simon Dining Set">
-                    <h2>SIMON - DINING SET</h2>
-                    <p>Rs.398,700.00</p>
-                </div>
+                <?php foreach ($products as $product): ?>
+                    <div class="product" onclick="window.location.href='page.php?id=<?php echo $product['product_id']; ?>'">
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($product['product_image']); ?>"
+                            alt="<?php echo $product['product_name']; ?>">
+                        <h2><?php echo $product['product_name']; ?></h2>
+                        <p>Rs.<?php echo number_format($product['product_price'], 2); ?></p>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-
         <div class="details">
             <div class="shopname" style="font-family: 'poppins';">
                 <h2>OneSeat</h2>
@@ -111,9 +135,7 @@
                 <a href=""><img src="../images/twitter.png" alt="twitter" style="margin: 10px;"></a>
             </div>
         </div>
-
     </footer>
-
 </body>
 
 </html>

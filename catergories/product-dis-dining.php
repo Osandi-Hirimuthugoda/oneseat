@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "No products found.";
 }
-
+ 
 $conn->close();
 ?>
 
@@ -97,8 +97,7 @@ $conn->close();
             </div>
             <div class="product-list">
                 <?php foreach ($products as $product): ?>
-                    <div class="product"
-                        onclick="window.location.href='product_details.php?id=<?php echo $product['product_id']; ?>'">
+                    <div class="product" onclick="window.location.href='page.php?id=<?php echo $product['product_id']; ?>'">
                         <img src="data:image/jpeg;base64,<?php echo base64_encode($product['product_image']); ?>"
                             alt="<?php echo $product['product_name']; ?>">
                         <h2><?php echo $product['product_name']; ?></h2>

@@ -1,31 +1,63 @@
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "oneseat"; // Replace with your database name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// SQL query to fetch product details by category name
+$category_name = 'Bedroom'; // Replace with the actual category name
+$sql = "SELECT product_id, product_name, product_price, product_image FROM product WHERE category = '$category_name'";
+
+$result = $conn->query($sql);
+
+$products = array();
+
+if ($result->num_rows > 0) {
+    // Fetch all products into an array
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
+} else {
+    echo "No products found.";
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneSeat - Bedroom</title>
+    <title>OneSeat - DiningRoom</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="bedroom.css">
+    <link rel="stylesheet" href="dining.css">
 </head>
 
 <body>
     <div class="logo">
-        <a href="#">
+        <a href="../index/oneseat.php">
             <img src="../images/Logo.png" alt="logo" width="125px" height="50px">
         </a>
     </div>
     <div class="topnav">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#categories">Categories</a>
+            <li><a href="../index/oneseat.php">Home</a></li>
+            <li><a href="../index/oneseat.php">Categories</a>
                 <ul id="submenu">
-                    <li><a href="dining.php">DINING</a></li>
+                    <li><a href="">DINING</a></li>
                     <li><a href="living.php">LIVING</a></li>
-                    <li><a href="">BEDROOM</a></li>
+                    <li><a href="bedroom.php">BEDROOM</a></li>
                 </ul>
             </li>
-
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -42,7 +74,6 @@
         <img src="../images/top.jpg" alt="image" width="1500px" height="400px">
         <div class="toptext">BEDROOM</div>
     </div>
-
     <main>
         <section class="products">
             <div class="filter-sort">
@@ -65,27 +96,19 @@
                 </div>
             </div>
             <div class="product-list">
-                <div class="product">
-                    <img src="../images/bedroom/bedroom1.jpg" alt="Linda Bedroom Suit">
-                    <h2>Linda Bedroom Suit</h2>
-                    <p>Rs.523,200.00</p>
-                </div>
-                <div class="product">
-                    <img src="../images/bedroom/bedroom2.jpg" alt="Elisa Bedroom Suit">
-                    <h2>Elisa Bedroom Suit</h2>
-                    <p>Rs.380,800.00</p>
-                </div>
-                <div class="product">
-                    <img src="../images/bedroom/bedroom3.jpg" alt="Simla Bedroom Suites">
-                    <h2>Simla Bedroom Suites</h2>
-                    <p>Rs.298,700.00</p>
-                </div>
+                <?php foreach ($products as $product): ?>
+                    <div class="product" onclick="window.location.href='page.php?id=<?php echo $product['product_id']; ?>'">
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($product['product_image']); ?>"
+                            alt="<?php echo $product['product_name']; ?>">
+                        <h2><?php echo $product['product_name']; ?></h2>
+                        <p>Rs.<?php echo number_format($product['product_price'], 2); ?></p>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-
         <div class="details">
             <div class="shopname" style="font-family: 'poppins';">
                 <h2>OneSeat</h2>
@@ -112,9 +135,7 @@
                 <a href=""><img src="../images/twitter.png" alt="twitter" style="margin: 10px;"></a>
             </div>
         </div>
-
     </footer>
-
 </body>
 
 </html>
