@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - OneSeat</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="web group.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <a href="">
-                        <img src="Logo.png" alt="logo" width="250px" height="80px">
-                    </a>
-                </div>
-                <div class="topnav">
+    
+    <div class="logo">
+        <a href="#">
+            <img src="Logo.png" alt="logo" width="125px" height="50px">
+        </a>
+    </div>
+    <div class="topnav">
                     <ul>
                         <li><a href="../index/oneseat.php">Home</a></li>
                         <li><a href="../index/oneseat.php">Categories</a>
@@ -33,13 +32,13 @@
                     <div class="split" style="padding-right: 35px;">
                         <a href=""> 
                             <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
-                            <a href="../shoping cart/cart.php"><img src="Cart (1).png" alt="Cart" width="25px"
-                                    height="35px" style="margin-right: 0px;"></a>
-
+                        </a>
+                        <a href="#">
+                            <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
                         </a>
             </nav>
         </div>
-    </header>
+        
     <main>
         <div class="top">
             <img src="top.jpg" alt="image" width="1200px" height="400px">

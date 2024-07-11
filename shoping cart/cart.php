@@ -50,6 +50,7 @@ $conn->close();
 <html lang="en">
 
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
@@ -68,11 +69,12 @@ $conn->close();
       <li><a href="../index/oneseat.php">Home</a></li>
       <li><a href="../index/oneseat.php">Categories</a>
         <ul id="submenu">
-          <li><a href="../catergories/dining.php">DINING</a></li>
-          <li><a href="../catergories/living.php">LIVING</a></li>
-          <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
+          <li><a href="../Categories/dining.php">DINING</a></li>
+          <li><a href="../Categories/living.php">LIVING</a></li>
+          <li><a href="../Categories/bedroom.php">BEDROOM</a></li>
         </ul>
       </li>
+
       <li><a href="../about-us/about_us.html">About</a></li>
       <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
@@ -86,11 +88,6 @@ $conn->close();
     </div>
   </div>
 
-
-
-
-
-
   <!-- cart -->
   <div class="container">
     <div class="shopping-cart">
@@ -101,6 +98,13 @@ $conn->close();
       <div class="cart-items">
         <?php foreach ($cart_items as $item): ?>
           <div class="cart-item">
+            <!-- Header Row -->
+            <div class="cart-header">
+              <div class="item-header">Purchased Item</div>
+              <div class="quantity-header">Quantity</div>
+              <div class="price-header">Price</div>
+            </div>
+            <!-- Purchased Item 1 -->
             <img src="data:image/jpeg;base64,<?php echo base64_encode($item['product_image']); ?>"
               alt="<?php echo $item['product_name']; ?>">
             <div class="item-details">
@@ -132,9 +136,6 @@ $conn->close();
     </div>
   </div>
 
-
-
-
   <!-- footer -->
   <footer id="footer" class="footer">
     <div class="details">
@@ -164,7 +165,6 @@ $conn->close();
       </div>
     </div>
   </footer>
-  <!-- JavaScript for smooth scrolling -->
   <script>
     function scrollToFooter() {
       document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
