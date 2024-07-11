@@ -96,14 +96,13 @@ $conn->close();
       <p>You have <?php echo count($cart_items); ?> items in your cart</p>
       <div class="sort-by">Sort by: <span>price</span></div>
       <div class="cart-items">
+        <div class="cart-header">
+          <div class="item-header">Purchased Item</div>
+          <div class="quantity-header">Quantity</div>
+          <div class="price-header">Price</div>
+        </div>
         <?php foreach ($cart_items as $item): ?>
           <div class="cart-item">
-            <!-- Header Row -->
-            <div class="cart-header">
-              <div class="item-header">Purchased Item</div>
-              <div class="quantity-header">Quantity</div>
-              <div class="price-header">Price</div>
-            </div>
             <!-- Purchased Item 1 -->
             <img src="data:image/jpeg;base64,<?php echo base64_encode($item['product_image']); ?>"
               alt="<?php echo $item['product_name']; ?>">
