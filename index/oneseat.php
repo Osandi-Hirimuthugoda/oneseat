@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -24,18 +26,30 @@
         </ul>
       </li>
 
-      <li><a href="../about-us/about_us.html">About</a></li>
+      <li><a href="../about-us/about_us.php">About</a></li>
       <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
     <div class="split" style="padding-right: 20px;">
       <a href="#">
         <img src="../images/login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
       </a>
-      <a href="../shoping cart/cart.php">
+      <a href="../shoping_cart/cart.php">
         <img src="../images/Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
       </a>
     </div>
   </div>
+  <?php 
+    if(isset($_SESSION['status'])) {
+  ?>
+    <div class="alert alert-success"> 
+      <b><?php echo $_SESSION['status'] ?></b>
+    </div>
+  <?php
+    unset($_SESSION['status']);
+    }
+  ?>
+  
+  
   <div class="top">
     <img src="../images/top.jpg" alt="image" width="1500px" height="400px">
     <div class="toptext">BUY YOUR <br> DREAM FURNITURE</div>

@@ -19,7 +19,7 @@ $quantity = $_POST['quantity'];
 
 // Retrieve cart for the current user (if user is logged in)
 // $user_id = $_SESSION['user_id']; // Example: assuming user ID is stored in session
-$user_id = 2;
+$user_id = $_SESSION['user_id'];
 
 // Check if the user has an active cart
 $sql = "SELECT * FROM cart WHERE user_id = '$user_id' AND cart_status = 'active'";
@@ -59,6 +59,7 @@ if ($result->num_rows > 0) {
     } else {
         echo "Error updating cart: " . $conn->error;
     }
+    header("Location:/oneseat/shoping_cart/cart.php");
 } else {
     // No active cart found, create a new cart entry
     $insert_sql = "INSERT INTO cart (user_id, product_ids, quantities, cart_status) VALUES ('$user_id', '$product_id', '$quantity', 'active')";
@@ -68,6 +69,7 @@ if ($result->num_rows > 0) {
     } else {
         echo "Error creating new cart: " . $conn->error;
     }
+    header("Location:/oneseat/shoping_cart/cart.php");
 }
 // Update product quantity in the product table
 $product_update_sql = "UPDATE product SET product_quantity = product_quantity - $quantity WHERE product_id = $product_id";

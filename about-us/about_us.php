@@ -41,7 +41,7 @@
             style="margin-right: 10px"
           />
         </a>
-        <a href="../shoping cart/cart.php">
+        <a href="../shoping_cart/cart.php">
           <img
             src="Cart (1).png"
             alt="cart"
@@ -86,54 +86,36 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="footer">
-      <div class="details">
-        <div class="shopname" style="font-family: 'poppins'">
-          <h2>OneSeat</h2>
-          <h6 style="opacity: 50%">
-            Mahenwatta, Pitipana, Homagama,<br />
-            Sri Lanka
-          </h6>
-          <br /><br /><br /><br />
-          <h5>2024 OneSeat. All right reserved</h5>
-        </div>
-        <div class="links" style="font-family: 'poppins'">
-          <h3>Links</h3>
-          <br />
-          <li><a href="../index/oneseat.php">Home</a></li>
-          <li>
-            <a href="../index/oneseat.php">Categories</a>
-            <ul id="submenu">
-              <li><a href="../catergories/dining.php">DINING</a></li>
-              <li><a href="../catergories/living.php">LIVING</a></li>
-              <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
-            </ul>
-          </li>
-          <a href="">About</a><br /><br />
-          <a href="">Contact</a><br /><br />
-        </div>
-        <div class="links" style="font-family: 'poppins'">
-          <h3>Help</h3>
-          <br />
-          <a href="">Payment Options</a><br /><br />
-          <a href="">Returns</a><br /><br />
-          <a href="">Privacy Policies</a><br /><br />
-        </div>
-        <div class="links" style="font-family: 'poppins'">
-          <h3>Contact Us</h3>
-          <br />
-          <a href=""
-            ><img src="fb.png" alt="facebook" style="margin: 10px"
-          /></a>
-          <a href=""
-            ><img src="insta.png" alt="instagram" style="margin: 10px"
-          /></a>
-          <a href=""
-            ><img src="twitter.png" alt="twitter" style="margin: 10px"
-          /></a>
-        </div>
-      </div>  
-    </footer>
+    <footer class="footer">
+
+    <div class="details">
+      <div class="shopname" style="font-family: 'poppins';">
+        <h2>OneSeat</h2>
+        <h6 style="opacity: 50%;">Mahenwatta, Pitipana, Homagama,<br> Sri Lanka</h6><br><br><br><br>
+        <h5>2024 OneSeat. All right reserved</h5>
+      </div>
+      <div class="links" style="font-family: 'poppins';">
+        <h3>Links</h3><br>
+        <a href="">Home</a><br><br>
+        <a href="">Categories</a><br><br>
+        <a href="">About</a><br><br>
+        <a href="">Contact</a><br><br>
+      </div>
+      <div class="links" style="font-family: 'poppins';">
+        <h3>Help</h3><br>
+        <a href="">Payment Options</a><br><br>
+        <a href="">Returns</a><br><br>
+        <a href="">Privacy Policies</a><br><br>
+      </div>
+      <div class="links" style="font-family: 'poppins';">
+        <h3>Contact Us</h3><br>
+        <a href=""><img src="../images/fb.png" alt="facebook" style="margin: 10px;"></a>
+        <a href=""><img src="../images/insta.png" alt="instagram" style="margin: 10px;"></a>
+        <a href=""><img src="../images/twitter.png" alt="twitter" style="margin: 10px;"></a>
+      </div>
+    </div>
+
+  </footer>
     <script>
       function scrollToFooter() {
         document

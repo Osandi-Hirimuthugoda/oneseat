@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -16,7 +17,7 @@ if ($conn->connect_error) {
 $product_id = $_GET['id'];
 
 // SQL query to fetch product details by product ID
-$sql = "SELECT product_name, product_price, product_image, category, product_quantity FROM product WHERE product_id = '$product_id'";
+$sql = "SELECT product_name, product_price, product_image, category, product_quantity,description FROM product WHERE product_id = '$product_id'";
 
 $result = $conn->query($sql);
 
@@ -48,7 +49,7 @@ $conn->close();
   <!-- Header -->
   <div class="logo">
     <a href="#">
-      <img src="Logo.png" alt="logo" width="125px" height="50px">
+      <img src="../images/Logo.png" alt="logo" width="125px" height="50px">
     </a>
   </div>
   <div class="topnav">
@@ -61,15 +62,15 @@ $conn->close();
           <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
         </ul>
       </li>
-      <li><a href="../about-us/about_us.html">About</a></li>
+      <li><a href="../about-us/about_us.php">About</a></li>
       <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
     <div class="split" style="padding-right: 20px;">
       <a href="#">
-        <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
+        <img src="../images/login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
       </a>
-      <a href="../shoping cart/cart.php">
-        <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
+      <a href="../shoping_cart/cart.php">
+        <img src="../images/Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
       </a>
     </div>
   </div>
@@ -82,18 +83,9 @@ $conn->close();
       <div class="product-title"><?php echo htmlspecialchars($product['product_name']); ?></div>
       <div class="product-price">Rs.<?php echo $product['product_price']; ?></div>
 
-      The SOFA PLAMIO is a stylish and comfortable piece of furniture designed to enhance any living space. Featuring
-      a modern design with clean lines and a robust frame, it offers both durability and aesthetic appeal. The sofa is
-      upholstered in high-quality fabric, available in various colors to suit different tastes and decor styles. With
-      plush cushions and ergonomic support, the SOFA PLAMIO provides exceptional comfort for lounging or entertaining
-      guests. Its sleek and contemporary look makes it a perfect addition to both residential and commercial settings.
-      <div class="product-meta">
-        <ul>
-          <li>Delivery: 05 – 10 working days – COLOMBO / 07 – 14 – OUT OF COLOMBO (To provide the best satisfaction,
-            the manufacturing process will start once you placed the order)</li>
-          <li>Color can differ from the showcase image – Contact the nearest oneseat Outlet for more details, </li>
-        </ul>
-      </div>
+      <?php echo $product['description']; ?>
+      <br>
+      <br>
 
       <?php
       if ($available_qty > 0) {
@@ -138,9 +130,9 @@ $conn->close();
       </div>
       <div class="links" style="font-family: 'poppins';">
         <h3>Contact Us</h3><br>
-        <a href=""><img src="fb.png" alt="facebook" style="margin: 10px;"></a>
-        <a href=""><img src="insta.png" alt="instagram" style="margin: 10px;"></a>
-        <a href=""><img src="twitter.png" alt="twitter" style="margin: 10px;"></a>
+        <a href=""><img src="../images/fb.png" alt="facebook" style="margin: 10px;"></a>
+        <a href=""><img src="../images/insta.png" alt="instagram" style="margin: 10px;"></a>
+        <a href=""><img src="../images/twitter.png" alt="twitter" style="margin: 10px;"></a>
       </div>
     </div>
   </footer>

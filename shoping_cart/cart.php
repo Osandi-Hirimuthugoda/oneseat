@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -12,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 //$user_id = $_SESSION['user_id']; // Example: assuming user ID is stored in session
-$user_id = 2;
+$user_id = $_SESSION['user_id'];
 
 $sql = "SELECT * FROM cart WHERE user_id = '$user_id' AND cart_status = 'active'";
 $result = $conn->query($sql);
@@ -69,13 +70,13 @@ $conn->close();
       <li><a href="../index/oneseat.php">Home</a></li>
       <li><a href="../index/oneseat.php">Categories</a>
         <ul id="submenu">
-          <li><a href="../Categories/dining.php">DINING</a></li>
-          <li><a href="../Categories/living.php">LIVING</a></li>
-          <li><a href="../Categories/bedroom.php">BEDROOM</a></li>
+          <li><a href="../catergories/dining.php">DINING</a></li>
+          <li><a href="../catergories/living.php">LIVING</a></li>
+          <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
         </ul>
       </li>
 
-      <li><a href="../about-us/about_us.html">About</a></li>
+      <li><a href="../about-us/about_us.php">About</a></li>
       <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
     </ul>
     <div class="split" style="padding-right: 20px;">
@@ -91,10 +92,9 @@ $conn->close();
   <!-- cart -->
   <div class="container">
     <div class="shopping-cart">
-      <a href="#" class="continue-shopping">← Continue Shopping</a>
+      <a href="../index/oneseat.php" class="continue-shopping">← Continue Shopping</a>
       <h2>Shopping cart</h2>
       <p>You have <?php echo count($cart_items); ?> items in your cart</p>
-      <div class="sort-by">Sort by: <span>price</span></div>
       <div class="cart-items">
         <div class="cart-header">
           <div class="item-header">Purchased Item</div>

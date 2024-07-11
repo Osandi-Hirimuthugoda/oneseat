@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -16,14 +17,14 @@ $product_id = intval($_POST['product_id']);
 $quantity = intval($_POST['quantity']);
 
 //$user_id = $_SESSION['user_id']; // Example: assuming user ID is stored in session
-$user_id = 2;
+$user_id = $_SESSION['user_id'];
 
 // Update the product quantity in the product table
 $product_sql = "UPDATE product SET product_quantity = product_quantity + $quantity WHERE product_id = $product_id";
 $conn->query($product_sql);
 
 // Remove the product from the cart
-$cart_sql = "SELECT * FROM cart WHERE user_id = '$user_id' AND cart_status = 'active'";
+$cart_sql = "SELECT * FROM cart WHERE user_id = $user_id AND cart_status = 'active'";
 $cart_result = $conn->query($cart_sql);
 
 if ($cart_result->num_rows > 0) {

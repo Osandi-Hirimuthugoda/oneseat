@@ -26,14 +26,14 @@
                                 <li><a href="../catergories/bedroom.php">BEDROOM</a></li>
                             </ul>
                         </li>
-                        <li><a href="../about-us/about_us.html">About</a></li>
+                        <li><a href="../about-us/about_us.php">About</a></li>
                         <li><a href="#contact" onclick="scrollToFooter()">Contact</a></li>
                     </ul>
                     <div class="split" style="padding-right: 35px;">
                         <a href=""> 
                             <img src="login.png" alt="login" width="35px" height="35px" style="margin-right: 10px;">
                         </a>
-                        <a href="#">
+                        <a href="../shoping_cart/cart.php">
                             <img src="Cart (1).png" alt="cart" width="35px" height="35px" style="padding-top: 0px;">
                         </a>
             </nav>
@@ -44,7 +44,7 @@
             <img src="top.jpg" alt="image" width="1200px" height="400px">
             <div class="toptext"> Checkout </div>
             </section>
-            <section class="checkout-form">
+            <form class="checkout-form" action="summary.php" method="post">
                 <div class="container">
 
                     <div class="billing-details">
@@ -100,37 +100,17 @@
                         </form>
                     </div>
                     <div class="order-details">
-                        <h3>Product</h3>
-                        <ul class="order-summary">
-                            <li>
-                                <span>DOMEX - DINING SET</span>
-                                <span>Rs. 368,800.00</span>
-                            </li>
-                            <li>
-                                <span>Subtotal</span>
-                                <span>Rs. 368,800.00</span>
-                            </li>
-                            <li class="total">
-                                <span>Total</span>
-                                <span>Rs. 368,800.00</span>
-                            </li>
-                        </ul>
+                        <h3>Total Amount: Rs. <?php echo $_POST['total']?></h3>
                         <div class="payment-method">
                             <h3>Payment Method</h3>
-                            <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer" checked>
-                            <label for="bank-transfer">Direct Bank Transfer</label>
-                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment
-                                reference. Your order will not be shipped until the funds have cleared in our account.
-                            </p>
-
-                            <input type="radio" id="cash-on-delivery" name="payment-method" value="cash-on-delivery">
+                            <input type="radio" id="cash-on-delivery" name="payment-method" value="cash-on-delivery" checked>
                             <label for="cash-on-delivery">Cash On Delivery</label>
                             <br>
                         </div>
                         <button type="submit" class="place-order">Place order</button>
                     </div>
                 </div>
-            </section>
+            </form>
     </main>
     <footer id="footer" class="footer">
     <div class="details">
