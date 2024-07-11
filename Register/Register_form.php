@@ -43,7 +43,7 @@
 
 
   <!-- footer -->
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="details">
       <div class="shopname" style="font-family: 'poppins';">
         <h2>OneSeat</h2>
@@ -65,9 +65,9 @@
       </div>
       <div class="links" style="font-family: 'poppins';">
         <h3>Contact Us</h3><br>
-        <a href=""><img src="../images/fb.png" alt="facebook" style="margin: 10px;"></a>
-        <a href=""><img src="../images/insta.png" alt="instagram" style="margin: 10px;"></a>
-        <a href=""><img src="../images/twitter.png" alt="twitter" style="margin: 10px;"></a>
+        <a href=""><img src="fb.png" alt="facebook" style="margin: 10px;"></a>
+        <a href=""><img src="insta.png" alt="instagram" style="margin: 10px;"></a>
+        <a href=""><img src="twitter.png" alt="twitter" style="margin: 10px;"></a>
       </div>
     </div>
   </footer>
